@@ -11,7 +11,7 @@ const CreatorProfile: React.SFC<CreatorProfileProps> = () => {
           <li className="breadcrumb-item">Home</li>
           <li className="breadcrumb-item">User</li>
           <li className="breadcrumb-item active" aria-current="page">
-            Profile Settings
+            Update Account
           </li>
         </ol>
       </nav>
@@ -39,7 +39,7 @@ const CreatorProfile: React.SFC<CreatorProfileProps> = () => {
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                     <circle cx="12" cy="7" r="4"></circle>
                   </svg>
-                  Profile Information
+                  My account
                 </a>
                 <a
                   href="accountsettings"
@@ -60,28 +60,9 @@ const CreatorProfile: React.SFC<CreatorProfileProps> = () => {
                     <circle cx="12" cy="12" r="3"></circle>
                     <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
                   </svg>
-                  Account Settings
+                  Privacy
                 </a>
-                <a
-                  href="security"
-                  data-toggle="tab"
-                  className="nav-item nav-link has-icon nav-link-faded"
-                >
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    className="feather feather-shield mr-2"
-                  >
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  </svg>
-                  Security
-                </a>
+               
                 <a
                   href="notifications"
                   data-toggle="tab"
@@ -101,12 +82,15 @@ const CreatorProfile: React.SFC<CreatorProfileProps> = () => {
                     <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
                     <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
                   </svg>
-                  Notification
+                  Alerts
                 </a>
+                
+                
+               
                 <a
                   href="billing"
                   data-toggle="tab"
-                  className="nav-item nav-link has-icon nav-link-faded"
+                  className="nav-item nav-link has-icon nav-link-faded active"
                 >
                   <svg
                     width="24"
@@ -129,8 +113,10 @@ const CreatorProfile: React.SFC<CreatorProfileProps> = () => {
                     ></rect>
                     <line x1="1" y1="10" x2="23" y2="10"></line>
                   </svg>
-                  Billing
+                  Listing Payment Status
                 </a>
+                
+
               </nav>
             </div>
           </div>
@@ -209,7 +195,7 @@ const CreatorProfile: React.SFC<CreatorProfileProps> = () => {
                 </li>
                 <li className="nav-item">
                   <a
-                    href="#notification"
+                    href="#notifications"
                     data-toggle="tab"
                     className="nav-link has-icon"
                   >
@@ -262,22 +248,20 @@ const CreatorProfile: React.SFC<CreatorProfileProps> = () => {
             </div>
             <div className="card-body tab-content">
               <div className="tab-pane active" id="profile">
-                <h6>YOUR PROFILE INFORMATION</h6>
+                <h6>Update Account</h6>
                 <hr />
                 <form>
-                  <div className="form-group">
-                    <label htmlFor="fullName">User type</label>
-                    <p></p>
-                      <button type="button" className="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
-                        Select user type
-                      </button>
-                      <div className="dropdown-menu dropdown-menu-lg-right">
-                        <button className="dropdown-item" type="button">Action</button>
-                        <button className="dropdown-item" type="button">Another action</button>
-                        <button className="dropdown-item" type="button">Something else here</button>
-                      </div>
-                  </div>
-                  <p></p>
+                <div className="dropdown">
+                    <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      User Type
+                    </button>
+                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a className="dropdown-item" href="#">User</a>
+                      <a className="dropdown-item" href="#">Company</a>
+                      <a className="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+                <p></p>
                   <div className="form-group">
                     <label htmlFor="fullName">Full Name</label>
                     <input
@@ -290,6 +274,7 @@ const CreatorProfile: React.SFC<CreatorProfileProps> = () => {
                     <small id="fullNameHelp" className="form-text text-muted">
                     </small>
                   </div>
+                  
                   <p></p>
                   <div className="form-group">
                     <label htmlFor="phone">Phone Number</label>
@@ -351,6 +336,16 @@ const CreatorProfile: React.SFC<CreatorProfileProps> = () => {
                   </div>
                   <p></p>
                   <div className="form-group">
+                    <label htmlFor="bio">City Area</label>
+                    <input
+                      className="form-control autosize"
+                      id="bio"
+                      placeholder="Enter your City Area"
+                      style={{}}
+                    ></input>
+                  </div>
+                  <p></p>
+                  <div className="form-group">
                     <label htmlFor="bio">Addres</label>
                     <input
                       className="form-control autosize"
@@ -387,13 +382,17 @@ const CreatorProfile: React.SFC<CreatorProfileProps> = () => {
                   <button type="reset" className="btn btn-light">
                     Reset Changes
                   </button>
+                 
+                 
                 </form>
-              </div>
+              
+            </div>
+            </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 
